@@ -14,7 +14,7 @@ export class ListVehicleComponent implements OnInit {
 
   ngOnInit(): void {
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
       
       let vehicle = new VehicleModel();
       vehicle.plate = "ABC-1234";
