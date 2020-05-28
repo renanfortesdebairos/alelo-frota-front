@@ -2,7 +2,7 @@
 <p class="titulo-pagina">Vehicle Management</p>
 <p class="subtitulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam mollitia, omnis incidunt quia neque illo iste ab, quod labore saepe modi? Voluptatibus ex quisquam quaerat tempora quae perferendis nostrum recusandae!</p>
 
-<button class="botao-add">Add Vehicle +</button>
+<button class="botao-add" routerLink="/update-vehicle">Add Vehicle +</button>
 <form id="formSearch" (ngSubmit)="onSubmit()" [formGroup]="formSearch">
   <div class="form-inline mb-4">
     <input id="plate" formControlName="plate" ngModel required type="text" placeholder="plate search" class="form-control form-control-underlined">

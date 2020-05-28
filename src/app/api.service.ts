@@ -24,4 +24,8 @@ export class ApiService {
   public deleteById(id) {
     return this.httpClient.delete(this.SERVER_URL + "/vehicles/" + id);
   }
+
+  public post(vehicle) {
+    return this.httpClient.post(this.SERVER_URL + "/vehicles" , vehicle);
+  }
 }

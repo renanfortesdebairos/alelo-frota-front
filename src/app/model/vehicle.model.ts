@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class VehicleModel {
     plate: string;
     model: string;
-    manufacture: string;
-    isAtivo: boolean;
+    manufacturer: string;
+    color: string;
+    active: boolean;
 }
