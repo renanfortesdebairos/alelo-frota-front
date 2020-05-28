@@ -89,3 +89,7 @@ mat-dialog-container#modal-component {
     left: 0;
     margin-left: calc(((100% - 1140px) / 2) + (1140px * 0.25) + (1140px * 0.75 * 0.5) - 125px);
 }
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #0E7F61;
+}

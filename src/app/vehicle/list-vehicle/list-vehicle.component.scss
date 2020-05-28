@@ -2,6 +2,11 @@ form {
 
     margin-top: 36px;
 
+    button {
+        background: transparent;
+        border: none;
+    }
+
     .form-control-underlined {
         border-width: 0;
         border-bottom-width: 1px;
@@ -27,19 +32,18 @@ form {
         height: 14px;
         fill: #C0C0C0;
     }
+}
 
-    button {
-        font-size: 10px;
-        border-radius: 4px;
-        padding: 8px 16px 8px 16px;
-        background-color: #BC2F6C;
-        color: #FFFFFF;
-        float: left;
-        position: absolute;
-        right: 0;
-        margin-right: 36px;
-    }
-
+.botao-add {
+    font-size: 10px;
+    border-radius: 4px;
+    padding: 8px 16px 8px 16px;
+    background-color: #BC2F6C;
+    color: #FFFFFF;
+    float: left;
+    position: absolute;
+    right: 0;
+    margin-right: 36px;
 }
 
 .bordered {
@@ -142,6 +146,10 @@ table {
     right: 0;
     position: absolute;
     margin-right: 36px;
+
+    &:hover {
+        cursor: pointer;
+    }
     
     .active-pagination {
         font-weight: bold;
