@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VehicleModel } from 'src/app/model/vehicle.model';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ModalComponent } from '../../modal/modal.component';
 
 @Component({
   selector: 'app-list-vehicle',
@@ -9,8 +11,9 @@ import { VehicleModel } from 'src/app/model/vehicle.model';
 export class ListVehicleComponent implements OnInit {
 
   vehicleList: Array<VehicleModel> = [];
+  isOverlayDeleteVehicleVisible: boolean = false;
 
-  constructor() { }
+  constructor(public matDialog: MatDialog) {}
 
   ngOnInit(): void {
 
@@ -29,6 +32,26 @@ export class ListVehicleComponent implements OnInit {
 
       this.vehicleList.push(vehicle);
 
+    }
+  }
+
+  openModal() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.id = "modal-component";
+    dialogConfig.height = "150px";
+    dialogConfig.width = "250px";
+    dialogConfig.data = this;
+    const modalDialog = this.matDialog.open(ModalComponent, dialogConfig);
+    this.change();
+    modalDialog.afterClosed().toPromise().then(() => this.change());
+  }
+
+  change() {
+    if (this.isOverlayDeleteVehicleVisible) {
+      this.isOverlayDeleteVehicleVisible = false;
+    } else {
+      this.isOverlayDeleteVehicleVisible = true;
     }
   }
 

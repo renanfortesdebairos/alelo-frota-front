@@ -1,0 +1,37 @@
+<p class="titulo-pagina">Update Vehicle</p>
+<form id="formSearch">
+    <div class="form-group mb-4">
+        <label id="labelPlate">Plate (disabled)</label>
+        <input id="formControlPlate" type="text" placeholder="ABC - 1234" class="form-control form-control-underlined">
+    </div>
+    <div class="form-group mb-4">
+        <label id="labelModel">Model</label>
+        <input id="formControlModel" type="text" placeholder="Class C 1.6 Avantgarde Turbo Flex" class="form-control form-control-underlined">
+    </div>
+    <div class="form-group mb-4">
+        <label id="labelManufacturer">Manufacturer</label>
+        <input id="formControlManufacturer" type="text" placeholder="Mercedez-Benz" class="form-control form-control-underlined">
+    </div>
+    <div class="form-group mb-4">
+        <label id="labelColor">Color</label>
+        <input id="formControlColor" type="text" placeholder="Black" class="form-control form-control-underlined">
+    </div>
+    <div class="form-group">
+        <div class="form-group label-name-status-radio">
+            <label id="labelStatus">Status</label>
+        </div>
+        <div class="status-radio">
+            <input type="radio" id="formControlRadioActive" name="status" value="active">
+            <label for="formControlRadioActive">Active</label>
+        </div>
+        <div class="status-radio">
+            <input type="radio" id="formControlRadioInactive" name="status" value="inactive">
+            <label for="formControlRadioInactive">Inactive</label>
+        </div>
+    </div>
+    <div class="form-group mb-4">
+        <button class="button-reset" type="reset">Reset All</button>
+        <button class="button-save" type="submit">Save</button>
+    </div>
+</form>
+<img src="assets/img/car.png" class="car-imagem"/>
